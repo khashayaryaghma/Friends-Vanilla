@@ -17,9 +17,14 @@ navItems.forEach((element) => {
     const navItem = document.createElement("li");
     navItem.textContent = element;
     navList.append(navItem);
-    // navItem.onclick = (e)=>{
-    //     navItem.style.borderBottom = "solid 2px #0096c7";
-    // }
+
+    // navItem.onclick = (e) => {
+    //     if (navItem.style.borderBottom) {
+    //         navItem.style.borderBottom = "";
+    //     } else {
+    //         navItem.style.borderBottom = "solid 2px #0096c7";
+    //     }
+    // };
 });
 
 //header Prettier
