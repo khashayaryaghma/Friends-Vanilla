@@ -9,7 +9,7 @@
 
 getData().then((data)=>{
     console.log(data);
-    data.map(()=>{
-        
+    data.map((el)=>{
+
     })
 })
