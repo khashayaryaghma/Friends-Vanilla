@@ -10,4 +10,15 @@
 }
 .headercontainer{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.hcontainer{
+    display: flex;
+    align-items: center;
+}
+h1{
+    margin-left: 2rem;
+    font-size: 3rem;
 }
