@@ -22,3 +22,7 @@ h1{
     margin-left: 2rem;
     font-size: 3rem;
 }
+div a{
+    font-size: 2rem;
+    color: inherit;
+}
