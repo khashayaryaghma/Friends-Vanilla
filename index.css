@@ -8,13 +8,13 @@
 .logo{
     width: 6rem;
 }
-.headercontainer{
+.headerContainer{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
 }
-.hcontainer{
+.hContainer{
     display: flex;
     align-items: center;
 }
@@ -25,4 +25,7 @@ h1{
 div a{
     font-size: 2rem;
     color: inherit;
+}
+.fa-github{
+    margin-left: 1rem;
 }
