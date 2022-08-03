@@ -8,6 +8,10 @@
 }
 .logo {
     width: 6rem;
+    transition: all ease-in 1s;
+}
+.logo:hover{
+    transform: rotate(720deg);
 }
 .headerContainer {
     display: flex;
@@ -49,4 +53,7 @@ nav ul li {
 }
 nav ul li:hover {
     background-color: #90e0ef;
+}
+h1 span{
+    transition: linear all 0.1s;
 }
