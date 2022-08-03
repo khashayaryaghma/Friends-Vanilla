@@ -9,7 +9,7 @@
 // };
 
 // Constant
-const navItems = ["Asia", "Europe", "Americas", "Africa", "Oceania"];
+const navItems = ["All","Asia", "Europe", "Americas", "Africa", "Oceania"];
 
 //create navItems
 const navList = document.querySelector(".navList");
@@ -17,6 +17,9 @@ navItems.forEach((element) => {
     const navItem = document.createElement("li");
     navItem.textContent = element;
     navList.append(navItem);
+    // navItem.onclick = (e)=>{   
+    //     navItem.style.borderBottom = "solid 2px #0096c7";
+    // }
 });
 
 getData().then((data) => {
