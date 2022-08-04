@@ -196,7 +196,7 @@ h1 span {
 
 /* cards */
 
-.card{
+.card {
     width: 17rem;
     height: 17rem;
     text-align: center;
@@ -205,27 +205,30 @@ h1 span {
     border-radius: 7px;
     box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px;
 }
-.cardContainer{
+.cardContainer {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 3rem;
     margin-bottom: 2rem;
 }
-.imageCard{
+.imageCard {
     width: 17rem;
 }
 
 /* footer */
-footer{
+footer {
     background-color: #90e0ef;
     text-align: center;
 }
-.friends{
+.friends {
     font-size: 7rem;
+}
+.friends span {
+    transition: linear all 0.1s;
 }
 
 /* display none */
-.dn{
+.dn {
     display: none;
 }
