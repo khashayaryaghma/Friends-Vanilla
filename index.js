@@ -18,7 +18,9 @@ navItems.forEach((element) => {
     const navItem = document.createElement("li");
     navItem.textContent = element;
     navList.append(navItem);
-
+    navItem.onclick = ()=>{
+        
+    }
     // navItem.onclick = (e) => {
     //     if (navItem.style.borderBottom) {
     //         navItem.style.borderBottom = "";
@@ -68,6 +70,7 @@ const slidesContainer = document.querySelector(".slides-container");
 const prevButton = document.getElementById("slide-arrow-prev");
 const nextButton = document.getElementById("slide-arrow-next");
 
+//card
 const cardContainer = document.querySelector(".cardContainer");
 
 getData().then((data) => {
