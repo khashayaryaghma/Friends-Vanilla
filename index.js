@@ -55,6 +55,8 @@ const slidesContainer = document.querySelector(".slides-container");
 const prevButton = document.getElementById("slide-arrow-prev");
 const nextButton = document.getElementById("slide-arrow-next");
 
+const cardContainer = document.querySelector(".cardContainer");
+
 getData().then((data) => {
     //random country
     const randomCountry = Math.floor(Math.random() * data.length) + 1;
@@ -88,8 +90,8 @@ getData().then((data) => {
 
     document.querySelector(".googleMapLink").href =
         data[randomCountry].maps.googleMaps;
-    data.map((el) => {
         //Slider or carousel
+    data.map((el) => {
         const slide = document.createElement("img");
         slide.src = el.flags.svg;
         slide.classList.add("slide");
@@ -108,4 +110,17 @@ getData().then((data) => {
             slidesContainer.scrollLeft += slideWidth;
         }, 4000);
     });
+    data.map((el)=>{
+        const card = document.createElement("div");
+        card.classList.add("card");
+        cardContainer.append(card);
+        const img = document.createElement("img");
+        img.src = el.flags.svg;
+        img.classList.add("imageCard");
+        const h3 = document.createElement("h3");
+        h3.textContent = el.name.common;
+        const capital = document.createElement("p");
+        capital.textContent = el.capital;
+        card.append(img, h3, capital);
+    })
 });

@@ -154,6 +154,7 @@ h1 span {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 /* article */
@@ -164,6 +165,7 @@ h1 span {
     background-color: #ade8f4;
     padding: 3.5rem;
     border-radius: 30px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px;
 }
 .flagOfRandom {
     width: 17rem;
@@ -190,4 +192,25 @@ h1 span {
 }
 .googleMapLink:hover {
     background-color: #48cae4;
+}
+
+/* cards */
+
+.card{
+    width: 17rem;
+    height: 17rem;
+    text-align: center;
+    background-color: #90e0ef;
+    margin-bottom: 2rem;
+    border-radius: 7px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px;
+}
+.cardContainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+.imageCard{
+    width: 17rem;
 }
