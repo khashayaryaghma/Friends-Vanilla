@@ -40,6 +40,19 @@ span.forEach((el) => {
     };
 });
 
+//footer Prettier
+
+const friends = document.querySelector(".friends");
+friends.innerHTML = friends.textContent.replace(/\w/g, "<span>$&</span>");
+const fSpan = document.querySelectorAll(".friends span");
+
+fSpan.forEach((el) => {
+    el.onmouseover = () => {
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        el.style.color = "#" + randomColor;
+    };
+});
+
 //Dark Mode
 const mode = document.querySelector(".mode");
 mode.onclick = () => {
@@ -110,6 +123,7 @@ getData().then((data) => {
             slidesContainer.scrollLeft += slideWidth;
         }, 4000);
     });
+    //create cards
     data.map((el)=>{
         const card = document.createElement("div");
         card.classList.add("card");
