@@ -1,4 +1,5 @@
 // fetch Data
+
 const getData = async () => {
     try {
         const res = await fetch("https://restcountries.com/v3.1/all");
@@ -57,9 +58,32 @@ const nextButton = document.getElementById("slide-arrow-next");
 getData().then((data) => {
     //random country
     const randomCountry = Math.floor(Math.random() * data.length) + 1;
-    console.log(data[randomCountry]);
+    data[randomCountry];
 
-    
+    document.querySelector(".nameOfRandomCountry").textContent =
+        data[randomCountry].name.common;
+    document.querySelector("#Capital").textContent +=
+        data[randomCountry].capital;
+
+    document.querySelector("#Continents").textContent +=
+        data[randomCountry].continents;
+    document.querySelector("#Population").textContent +=
+        data[randomCountry].population;
+    document.querySelector("#Languages").textContent += Object.values(
+        data[randomCountry].languages
+    ).map((el) => el + " ");
+    document.querySelector("#Currencies").textContent += Object.values(
+        data[randomCountry].currencies
+    ).map((el) => el.name);
+
+    document.querySelector("#Timezones").textContent += data[
+        randomCountry
+    ].timezones.map((el) => el + " ");
+
+    document.querySelector("#Borders").textContent += data[
+        randomCountry
+    ]?.borders.map((el) => el + " ");
+
     data.map((el) => {
         //Slider or carousel
         const slide = document.createElement("img");
@@ -75,10 +99,9 @@ getData().then((data) => {
             const slideWidth = slide.clientWidth;
             slidesContainer.scrollLeft -= slideWidth;
         });
-        setInterval(()=>{
-        const slideWidth = slide.clientWidth;
-        slidesContainer.scrollLeft += slideWidth;
-    },4000)
+        setInterval(() => {
+            const slideWidth = slide.clientWidth;
+            slidesContainer.scrollLeft += slideWidth;
+        }, 4000);
     });
-    
 });
