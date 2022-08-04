@@ -72,5 +72,10 @@ getData().then((data) => {
             const slideWidth = slide.clientWidth;
             slidesContainer.scrollLeft -= slideWidth;
         });
+        setInterval(()=>{
+        const slideWidth = slide.clientWidth;
+        slidesContainer.scrollLeft += slideWidth;
+    },4000)
     });
+    
 });
