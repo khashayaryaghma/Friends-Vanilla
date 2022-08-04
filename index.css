@@ -29,9 +29,12 @@ h1 {
 
     font-size: 3rem;
 }
-div a {
+header div div a {
     font-size: 1.8rem;
     color: inherit;
+}
+header div div a:hover{
+    color: gray;
 }
 .rightHContainer{
     display: flex;
@@ -51,6 +54,7 @@ div a {
     align-items: center;
     width: 31%;
     cursor: pointer;
+    user-select: none;
 }
 .navList {
     display: flex;
