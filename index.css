@@ -33,9 +33,6 @@ div a {
     font-size: 1.8rem;
     color: inherit;
 }
-.fa-github {
-    /* margin-left: 1rem; */
-}
 .rightHContainer{
     display: flex;
     align-items: center;
