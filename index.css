@@ -69,6 +69,10 @@ header {
 }
 nav {
     background-color: #ade8f4;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 nav ul li {
     padding: 1rem;
