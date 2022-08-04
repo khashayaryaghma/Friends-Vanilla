@@ -1,12 +1,12 @@
-//fetch Data
-// const getData = async () => {
-//     try {
-//         const res = await fetch("https://restcountries.com/v3.1/all");
-//         return res.json()
-//     } catch (error) {
-//         console.log(error);
-//     }
-// };
+// fetch Data
+const getData = async () => {
+    try {
+        const res = await fetch("https://restcountries.com/v3.1/all");
+        return res.json();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 // Constant
 const navItems = ["All", "Asia", "Europe", "Americas", "Africa", "Oceania"];
@@ -41,16 +41,36 @@ span.forEach((el) => {
 
 //Dark Mode
 const mode = document.querySelector(".mode");
-mode.onclick = ()=>{
-    if(mode.textContent.includes("Dark Mode")){
+mode.onclick = () => {
+    if (mode.textContent.includes("Dark Mode")) {
         mode.innerHTML = `<i class="fa-solid fa-sun"></i>` + "Light Mode";
-    }else{
-        mode.innerHTML = `<i class="fa-solid fa-moon"></i>` + "Dark Mode"
+    } else {
+        mode.innerHTML = `<i class="fa-solid fa-moon"></i>` + "Dark Mode";
     }
-    
-}
+};
 
-// getData().then((data) => {
-//     console.log(data);
-//     data.map((el) => {});
-// });
+//Slider or carousel
+const slidesContainer = document.querySelector(".slides-container");
+const prevButton = document.getElementById("slide-arrow-prev");
+const nextButton = document.getElementById("slide-arrow-next");
+
+getData().then((data) => {
+    console.log(data);
+    data.map((el) => {
+        //Slider or carousel
+
+        const slide = document.createElement("img");
+        slide.src = el.flags.svg;
+        slide.classList.add("slide");
+        slidesContainer.append(slide);
+        nextButton.addEventListener("click", () => {
+            const slideWidth = slide.clientWidth;
+            slidesContainer.scrollLeft += slideWidth;
+        });
+
+        prevButton.addEventListener("click", () => {
+            const slideWidth = slide.clientWidth;
+            slidesContainer.scrollLeft -= slideWidth;
+        });
+    });
+});
