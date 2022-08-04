@@ -17,23 +17,38 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
-    padding-bottom: 0.5rem;
+    height: 8.5rem;
 }
 .hContainer {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
 }
 h1 {
-    margin-left: 2rem;
+
     font-size: 3rem;
 }
 div a {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: inherit;
 }
 .fa-github {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
+}
+.rightHContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+}
+.iconContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 18%;
+}
+.mode{
+    font-size: 1.2rem;
 }
 .navList {
     display: flex;
