@@ -71,19 +71,23 @@ getData().then((data) => {
         data[randomCountry].population;
     document.querySelector("#Languages").textContent += Object.values(
         data[randomCountry].languages
-    ).map((el) => el + " ");
+    )?.map((el) => el + " ");
     document.querySelector("#Currencies").textContent += Object.values(
         data[randomCountry].currencies
-    ).map((el) => el.name);
+    )?.map((el) => el.name);
 
     document.querySelector("#Timezones").textContent += data[
         randomCountry
-    ].timezones.map((el) => el + " ");
+    ].timezones?.map((el) => el + " ");
 
     document.querySelector("#Borders").textContent += data[
         randomCountry
-    ]?.borders.map((el) => el + " ");
+    ].borders?.map((el) => el + " ");
 
+    document.querySelector(".flagOfRandom").src = data[randomCountry].flags.svg;
+
+    document.querySelector(".googleMapLink").href =
+        data[randomCountry].maps.googleMaps;
     data.map((el) => {
         //Slider or carousel
         const slide = document.createElement("img");

@@ -40,16 +40,23 @@
         <main>
             <section class="beginMain">
                 <article class="randomCountry">
-                    <h2 class="nameOfRandomCountry">Name</h2>
-                    <ul>
-                        <li id="Capital">Capital: </li>
-                        <li id="Continents">Continents: </li>
-                        <li id="Population">Population: </li>
-                        <li id="Languages">Languages: </li>
-                        <li id="Currencies">Currencies: </li>
-                        <li id="Timezones">Timezones: </li>
-                        <li id="Borders">Borders: </li>
-                    </ul>
+                    <div class="leftSideOfArticle">
+                        <h2 class="nameOfRandomCountry">Name</h2>
+                        <ul>
+                            <li id="Capital">Capital: </li>
+                            <li id="Continents">Continents: </li>
+                            <li id="Population">Population: </li>
+                            <li id="Languages">Languages: </li>
+                            <li id="Currencies">Currencies: </li>
+                            <li id="Timezones">Timezones: </li>
+                            <li id="Borders">Borders: </li>
+                        </ul>
+                    </div>
+
+                    <div class="rightSideOfArticle">
+                        <img alt="flag" class="flagOfRandom" />
+                        <a href="" class="googleMapLink">Google Map</a>
+                    </div>
                 </article>
                 <section class="slider-wrapper">
                     <button class="slide-arrow" id="slide-arrow-prev">
@@ -58,8 +65,10 @@
                     <button class="slide-arrow" id="slide-arrow-next">
                         <i class="fa-solid fa-angle-right"></i>
                     </button>
-                    <section class="slides-container" id="slides-container">
-                    </section>
+                    <section
+                        class="slides-container"
+                        id="slides-container"
+                    ></section>
                 </section>
             </section>
         </main>
