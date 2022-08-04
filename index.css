@@ -224,3 +224,8 @@ footer{
 .friends{
     font-size: 7rem;
 }
+
+/* display none */
+.dn{
+    display: none;
+}
