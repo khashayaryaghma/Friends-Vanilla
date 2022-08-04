@@ -35,7 +35,6 @@ const span = document.querySelectorAll("h1 span");
 span.forEach((el) => {
     el.onmouseover = () => {
         let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-        console.log(randomColor);
         el.style.color = "#" + randomColor;
     };
 });
