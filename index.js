@@ -39,6 +39,17 @@ span.forEach((el) => {
     };
 });
 
+//Dark Mode
+const mode = document.querySelector(".mode");
+mode.onclick = ()=>{
+    if(mode.textContent.includes("Dark Mode")){
+        mode.innerHTML = `<i class="fa-solid fa-sun"></i>` + "Light Mode";
+    }else{
+        mode.innerHTML = `<i class="fa-solid fa-moon"></i>` + "Dark Mode"
+    }
+    
+}
+
 // getData().then((data) => {
 //     console.log(data);
 //     data.map((el) => {});
