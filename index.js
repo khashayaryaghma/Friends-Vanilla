@@ -55,10 +55,13 @@ const prevButton = document.getElementById("slide-arrow-prev");
 const nextButton = document.getElementById("slide-arrow-next");
 
 getData().then((data) => {
-    console.log(data);
+    //random country
+    const randomCountry = Math.floor(Math.random() * data.length) + 1;
+    console.log(data[randomCountry]);
+
+    
     data.map((el) => {
         //Slider or carousel
-
         const slide = document.createElement("img");
         slide.src = el.flags.svg;
         slide.classList.add("slide");
