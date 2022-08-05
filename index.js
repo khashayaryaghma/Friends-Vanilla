@@ -25,7 +25,7 @@ navItems.forEach((element) => {
     //     if (navItem.style.borderBottom) {
     //         navItem.style.borderBottom = "";
     //     } else {
-    //         navItem.style.borderBottom = "solid 2px #0096c7";
+    //         navItem.style.borderBottom = "inset 2px #0096c7";
     //     }
     // };
 });
