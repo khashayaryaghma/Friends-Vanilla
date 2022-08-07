@@ -75,6 +75,8 @@ nav {
     left: 0;
     right: 0;
     top: 0;
+    z-index: 999;
+    box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px;
 }
 nav ul li {
     padding: 1rem;
@@ -232,4 +234,14 @@ footer {
 /* display none */
 .dn {
     display: none;
+}
+
+/* darkMode */
+.lowDark{
+    background-color: #27496D;
+    color: #E7F6F2;
+}
+.highDark{
+    background-color: #142850;
+    color: #E7F6F2;
 }

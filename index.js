@@ -68,11 +68,27 @@ fSpan.forEach((el) => {
 
 //Dark Mode
 const mode = document.querySelector(".mode");
+
 mode.onclick = () => {
+    const lDark = document.querySelectorAll(".lDark");
+    const hDark = document.querySelectorAll(".hDark");
     if (mode.textContent.includes("Dark Mode")) {
         mode.innerHTML = `<i class="fa-solid fa-sun"></i>` + "Light Mode";
+        hDark.forEach((el)=>{
+            el.classList.add("highDark")
+        });
+        lDark.forEach((el) => {
+            el.classList.add("lowDark");
+        });
+
     } else {
         mode.innerHTML = `<i class="fa-solid fa-moon"></i>` + "Dark Mode";
+        hDark.forEach((el) => {
+            el.classList.remove("highDark");
+        });
+        lDark.forEach((el) => {
+            el.classList.remove("lowDark");
+        });
     }
 };
 
@@ -140,7 +156,7 @@ getData().then((data) => {
     //create cards
     data.map((el) => {
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("card","hDark");
         cardContainer.append(card);
         const img = document.createElement("img");
         img.src = el.flags.svg;
