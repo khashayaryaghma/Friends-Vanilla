@@ -19,7 +19,19 @@ navItems.forEach((element) => {
     navItem.textContent = element;
     navList.append(navItem);
     navItem.onclick = ()=>{
-        
+        const box = document.querySelectorAll(".card");
+        console.log(box);
+        box.forEach((el)=>{
+            if (navItem.textContent==="All") {
+                el.classList.remove("dn");
+            } else if (!el.textContent.includes(navItem.textContent)) {
+                console.log("hi");
+                el.classList.add("dn");
+            } else {
+                el.classList.remove("dn");
+            }
+        })
+
     }
     // navItem.onclick = (e) => {
     //     if (navItem.style.borderBottom) {
