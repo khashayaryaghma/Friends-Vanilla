@@ -10,7 +10,7 @@ const getData = async () => {
 };
 
 // Constant
-const navItems = ["All", "Asia", "Europe", "Americas", "Africa", "Oceania"];
+const navItems = ["All", "Asia", "Europe", "America", "Africa", "Oceania"];
 
 //create navItems
 const navList = document.querySelector(".navList");
@@ -18,11 +18,11 @@ navItems.forEach((element) => {
     const navItem = document.createElement("li");
     navItem.textContent = element;
     navList.append(navItem);
-    navItem.onclick = ()=>{
+    navItem.onclick = () => {
         const box = document.querySelectorAll(".card");
         console.log(box);
-        box.forEach((el)=>{
-            if (navItem.textContent==="All") {
+        box.forEach((el) => {
+            if (navItem.textContent === "All") {
                 el.classList.remove("dn");
             } else if (!el.textContent.includes(navItem.textContent)) {
                 console.log("hi");
@@ -30,9 +30,8 @@ navItems.forEach((element) => {
             } else {
                 el.classList.remove("dn");
             }
-        })
-
-    }
+        });
+    };
     // navItem.onclick = (e) => {
     //     if (navItem.style.borderBottom) {
     //         navItem.style.borderBottom = "";
@@ -118,7 +117,7 @@ getData().then((data) => {
 
     document.querySelector(".googleMapLink").href =
         data[randomCountry].maps.googleMaps;
-        //Slider or carousel
+    //Slider or carousel
     data.map((el) => {
         const slide = document.createElement("img");
         slide.src = el.flags.svg;
@@ -139,7 +138,7 @@ getData().then((data) => {
         }, 4000);
     });
     //create cards
-    data.map((el)=>{
+    data.map((el) => {
         const card = document.createElement("div");
         card.classList.add("card");
         cardContainer.append(card);
@@ -150,6 +149,9 @@ getData().then((data) => {
         h3.textContent = el.name.common;
         const capital = document.createElement("p");
         capital.textContent = el.capital;
-        card.append(img, h3, capital);
-    })
+        const continents = document.createElement("p");
+        continents.textContent = el.continents;
+        continents.style.visibility = "hidden"
+        card.append(img, h3, capital, continents);
+    });
 });
