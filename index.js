@@ -20,7 +20,7 @@ navItems.forEach((element) => {
     navList.append(navItem);
     navItem.onclick = () => {
         const box = document.querySelectorAll(".card");
-        console.log(box);
+
         box.forEach((el) => {
             if (navItem.textContent === "All") {
                 el.classList.remove("dn");
@@ -149,9 +149,9 @@ getData().then((data) => {
         h3.textContent = el.name.common;
         const capital = document.createElement("p");
         capital.textContent = el.capital;
-        const continents = document.createElement("p");
-        continents.textContent = el.continents;
-        continents.style.visibility = "hidden"
-        card.append(img, h3, capital, continents);
+        const continent = document.createElement("p");
+        continent.textContent = el.continents;
+        continent.style.visibility = "hidden"
+        card.append(img, h3, capital, continent);
     });
 });
