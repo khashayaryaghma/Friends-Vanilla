@@ -198,7 +198,7 @@ h1 span {
 
 .card {
     width: 17rem;
-    height: 17rem;
+    height: 16rem;
     text-align: center;
     background-color: #90e0ef;
     margin-bottom: 2rem;
@@ -214,6 +214,7 @@ h1 span {
 }
 .imageCard {
     width: 17rem;
+    height: 8rem;
 }
 
 /* footer */
