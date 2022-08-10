@@ -81,6 +81,7 @@ nav {
 nav ul li {
     padding: 1rem;
     transition: all linear 0.1s;
+    cursor: pointer;
 }
 nav ul li:hover {
     background-color: #90e0ef;
@@ -206,6 +207,7 @@ h1 span {
     margin-bottom: 2rem;
     border-radius: 7px;
     box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px;
+    user-select: none;
 }
 .cardContainer {
     display: flex;
